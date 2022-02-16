@@ -11,4 +11,32 @@
 [ec2-user@ip-172-31-27-231 ~]$ sudo cp mongod mongod_shard2a
 [ec2-user@ip-172-31-27-231 ~]$ sudo cp mongod mongod_shard2b
 [ec2-user@ip-172-31-27-231 ~]$ sudo cp mongod mongod_shard2c
-
+[ec2-user@ip-172-31-27-231 ~]$ 
+[ec2-user@ip-172-31-27-231 ~]$ 
+[ec2-user@ip-172-31-27-231 ~]$ 
+[ec2-user@ip-172-31-27-231 ~]$ cd /usr/bin/
+[ec2-user@ip-172-31-27-231 bin]$ ls -ltr mongo*
+-rwxr-xr-x 1 root   root   65347984 Jan 20 15:18 mongos
+-rwxr-xr-x 1 root   root   83335552 Jan 20 15:18 mongod
+-rwxr-xr-x 1 root   root   53672392 Jan 20 15:18 mongo
+-rwxr-xr-x 1 mongod mongod 16772224 Feb  1 13:49 mongodump
+-rwxr-xr-x 1 mongod mongod 16427736 Feb  1 13:49 mongoexport
+-rwxr-xr-x 1 mongod mongod 17313056 Feb  1 13:49 mongofiles
+-rwxr-xr-x 1 mongod mongod 16703824 Feb  1 13:49 mongoimport
+-rwxr-xr-x 1 mongod mongod 17149344 Feb  1 13:49 mongorestore
+-rwxr-xr-x 1 mongod mongod 16270280 Feb  1 13:49 mongostat
+-rwxr-xr-x 1 mongod mongod 15934224 Feb  1 13:49 mongotop
+-rwxr-xr-x 1 root   root   83335552 Feb 15 11:20 mongodconf1
+-rwxr-xr-x 1 root   root   83335552 Feb 15 11:38 mongod_shard1a
+-rwxr-xr-x 1 root   root   83335552 Feb 15 12:26 mongod_shard1b
+-rwxr-xr-x 1 root   root   83335552 Feb 15 12:26 mongod_shard1c
+-rwxr-xr-x 1 root   root   83335552 Feb 15 12:45 mongodconf2
+-rwxr-xr-x 1 root   root   83335552 Feb 15 12:45 mongodconf3
+-rwxr-xr-x 1 root   root   83335552 Feb 15 16:59 mongod_shard2a
+-rwxr-xr-x 1 root   root   83335552 Feb 15 16:59 mongod_shard2b
+-rwxr-xr-x 1 root   root   83335552 Feb 15 16:59 mongod_shard2c
+[ec2-user@ip-172-31-27-231 bin]$ 
+[ec2-user@ip-172-31-27-231 bin]$ 
+[ec2-user@ip-172-31-27-231 bin]$ 
+[ec2-user@ip-172-31-27-231 bin]$ 
+[ec2-user@ip-172-31-27-231 bin]$ 
