@@ -9,3 +9,18 @@ sudo systemctl enabe mongos.service
 sudo systemctl enabe mongod_shard2a.service
 sudo systemctl enabe mongod_shard2b.service
 sudo systemctl enabe mongod_shard2c.service
+
+
+
+[ec2-user@ip-172-31-27-231 ~]$ systemctl list-unit-files --type=service
+mongod.service                                enabled 
+mongod_confserv1.service                      enabled 
+mongod_confserv2.service                      enabled 
+mongod_confserv3.service                      enabled 
+mongod_shard1a.service                        enabled 
+mongod_shard1b.service                        enabled 
+mongod_shard1c.service                        enabled 
+mongod_shard2a.service                        enabled 
+mongod_shard2b.service                        enabled 
+mongod_shard2c.service                        enabled 
+mongos.service                                enabled 
