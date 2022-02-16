@@ -72,4 +72,6 @@ mongod_shard2c.service)
 )
   
   
-7th:- create  
+7th:- now its time to enable the services one by one that we created above, the command is sudo systemctl enable mongod_confserv1.service
+  
+8th :- once all the services are up its time to start each mongo nodes  one by one, the command is sudo systemctl start mongod_confserv1.service
