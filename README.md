@@ -76,5 +76,12 @@ mongod_shard2c.service)
   
 8th :- once all the services are up its time to start each mongo nodes  one by one, the command is sudo systemctl start mongod_confserv1.service
   
-9th now connect to the one of the config node and enable the replication for the congifg cluster 
-      [ec2-user@ip-172-31-27-231 ~]$ mongo --host 172.31.27.231:27050
+9(a)connect to the one of the config node and enable the replication for the congifg cluster
+ 
+ (b)connect to shard1 node and enable the replication for the shard1 cluster
+ 
+ (c)connect to shard2 node and enable the replication for the shard2 cluster
+ 
+ (d)connect to mongos node and both the shard in mongos
+  
+      
