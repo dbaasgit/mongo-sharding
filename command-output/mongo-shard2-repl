@@ -1,0 +1,51 @@
+[ec2-user@ip-172-31-27-231 ~]$ mongo --host 172.31.27.231:27040
+MongoDB shell version v4.4.12
+connecting to: mongodb://172.31.27.231:27040/?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("76be4298-e8e3-4cd9-893a-aea35998bcdf") }
+MongoDB server version: 4.4.12
+---
+The server generated these startup warnings when booting: 
+        2022-02-16T05:02:49.429+00:00: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+---
+---
+        Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+        metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+
+        The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+        and anyone you share the URL with. MongoDB may use this information to make product
+        improvements and to suggest MongoDB products and deployment options to you.
+
+        To enable free monitoring, run the following command: db.enableFreeMonitoring()
+        To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+---
+> 
+> 
+> 
+> 
+> rs.initiate(
+...   {
+...     _id: "shrd2repl",
+...     members: [
+...       { _id : 0, host : "172.31.27.231:27040" },
+...       { _id : 1, host : "172.31.27.231:27041" },
+...       { _id : 2, host : "172.31.27.231:27042" }
+...       ]
+...   }
+... )
+{
+	"ok" : 1,
+	"$clusterTime" : {
+		"clusterTime" : Timestamp(1644988193, 1),
+		"signature" : {
+			"hash" : BinData(0,"AAAAAAAAAAAAAAAAAAAAAAAAAAA="),
+			"keyId" : NumberLong(0)
+		}
+	},
+	"operationTime" : Timestamp(1644988193, 1)
+}
+shrd2repl:SECONDARY> 
+
+
+shrd2repl:SECONDARY> 
+shrd2repl:SECONDARY> 
+shrd2repl:SECONDARY> 
