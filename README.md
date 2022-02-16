@@ -12,12 +12,13 @@ config server:-
               mongodconf3 port 27052
               
 Shard-1 servers:-
-              shard1a    port 27030;
-              shard1b    port 27031; 
-              shard1c    port 27032
+              mongo_shard1a    port 27030;
+              mongo_shard1b    port 27031; 
+              mongo_shard1c    port 27032
               
 Shard-2 server:-
-              shard2a   port 27040;
-              shard2b   port 27041;
-              shard2c   port 27042
+              mongo_shard2a   port 27040;
+              mongo_shard2b   port 27041;
+              mongo_shard2c   port 27042
              
+mongos port 27017
