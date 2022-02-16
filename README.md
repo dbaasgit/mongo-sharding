@@ -33,7 +33,7 @@ Steps:-
 
 4th:- create configuration file for each node in /etc dir.
 
-5th:- create configuration file for each node. (mongod_shard1a.conf
+  (mongod_shard1a.conf
 mongod_shard1b.conf
 mongod_shard1c.conf
 mongodconf1.conf
@@ -44,3 +44,30 @@ mongod_shard2a.conf
 mongod_shard2b.conf
 mongod_shard2c.conf
 )
+
+5th:- creating services in /usr/lib/systemd/system/   dir [use touch command ex. sudo touch mongod_shard1a.service]
+  (mongod_shard1a.service
+mongod_shard1b.service
+mongod_shard1c.service
+mongod_confserv1.service
+mongod_confserv2.service
+mongod_confserv3.service
+mongos.service
+mongod_shard2a.service
+mongod_shard2b.service
+mongod_shard2c.service)
+  
+ 6th:- now create moongod binary in /usr/bin/  dir [use cp command ex. sudo cp mongod mongod_shard1a. and dont create for mongos or mongod as it already been created by Default when we install mongo]
+  ( mongodconf1
+ mongod_shard1a
+ mongod_shard1b
+ mongod_shard1c
+ mongodconf2
+ mongodconf3
+ mongod_shard2a
+ mongod_shard2b
+ mongod_shard2c
+)
+  
+  
+6th:- create  
