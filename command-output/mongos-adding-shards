@@ -1,0 +1,86 @@
+[ec2-user@ip-172-31-27-231 ~]$ mongo --host 172.31.27.231:27017
+MongoDB shell version v4.4.12
+connecting to: mongodb://172.31.27.231:27017/?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("fe84a426-75c8-4b4d-86e9-676d0422d06c") }
+MongoDB server version: 4.4.12
+---
+The server generated these startup warnings when booting: 
+        2022-02-15T15:39:11.128+00:00: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+---
+mongos> 
+mongos> 
+mongos> sh.addShard("shrd1repl/172.31.27.231:27030,172.31.27.231:27031,172.31.27.231:27032")
+{
+	"shardAdded" : "shrd1repl",
+	"ok" : 1,
+	"operationTime" : Timestamp(1644939797, 3),
+	"$clusterTime" : {
+		"clusterTime" : Timestamp(1644939797, 3),
+		"signature" : {
+			"hash" : BinData(0,"AAAAAAAAAAAAAAAAAAAAAAAAAAA="),
+			"keyId" : NumberLong(0)
+		}
+	}
+}
+mongos> sh.status()
+--- Sharding Status --- 
+  sharding version: {
+  	"_id" : 1,
+  	"minCompatibleVersion" : 5,
+  	"currentVersion" : 6,
+  	"clusterId" : ObjectId("620ba16b92a2422a5f78ba87")
+  }
+  shards:
+        {  "_id" : "shrd1repl",  "host" : "shrd1repl/172.31.27.231:27030,172.31.27.231:27031,172.31.27.231:27032",  "state" : 1 }
+  active mongoses:
+        "4.4.12" : 1
+  autosplit:
+        Currently enabled: yes
+  balancer:
+        Currently enabled:  yes
+        Currently running:  no
+        Failed balancer rounds in last 5 attempts:  0
+        Migration Results for the last 24 hours: 
+                No recent migrations
+  databases:
+        {  "_id" : "config",  "primary" : "config",  "partitioned" : true }
+mongos> 
+mongos> 
+mongos> 
+mongos> sh.addShard("shrd1repl/172.31.27.231:27040,172.31.27.231:27041,172.31.27.231:27042")
+{
+	"shardAdded" : "shrd2repl",
+	"ok" : 1,
+	"operationTime" : Timestamp(1644949586, 3),
+	"$clusterTime" : {
+		"clusterTime" : Timestamp(1644949586, 3),
+		"signature" : {
+			"hash" : BinData(0,"AAAAAAAAAAAAAAAAAAAAAAAAAAA="),
+			"keyId" : NumberLong(0)
+		}
+	}
+}
+mongos> sh.status()
+--- Sharding Status --- 
+  sharding version: {
+  	"_id" : 1,
+  	"minCompatibleVersion" : 5,
+  	"currentVersion" : 6,
+  	"clusterId" : ObjectId("620ba16b92a2422a5f78ba87")
+  }
+  shards:
+        {  "_id" : "shrd1repl",  "host" : "shrd1repl/172.31.27.231:27030,172.31.27.231:27031,172.31.27.231:27032",  "state" : 1 }
+        {  "_id" : "shrd1repl",  "host" : "shrd1repl/172.31.27.231:27040,172.31.27.231:27041,172.31.27.231:27042",  "state" : 1 }
+  active mongoses:
+        "4.4.12" : 1
+  autosplit:
+        Currently enabled: yes
+  balancer:
+        Currently enabled:  yes
+        Currently running:  no
+        Failed balancer rounds in last 5 attempts:  0
+        Migration Results for the last 24 hours: 
+                No recent migrations
+  databases:
+        {  "_id" : "config",  "primary" : "config",  "partitioned" : true }
+mongos> 
