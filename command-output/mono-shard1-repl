@@ -1,0 +1,221 @@
+[ec2-user@ip-172-31-27-231 ~]$ mongo --host 172.31.27.231:27030
+MongoDB shell version v4.4.12
+connecting to: mongodb://172.31.27.231:27030/?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("f8c38ffa-63b6-4847-b760-92f1047d9b96") }
+MongoDB server version: 4.4.12
+---
+The server generated these startup warnings when booting: 
+        2022-02-15T11:39:00.105+00:00: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+---
+---
+        Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+        metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+
+        The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+        and anyone you share the URL with. MongoDB may use this information to make product
+        improvements and to suggest MongoDB products and deployment options to you.
+
+        To enable free monitoring, run the following command: db.enableFreeMonitoring()
+        To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+---
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> rs.initiate(
+...   {
+...     _id: "shrd1repl",
+...     members: [
+...       { _id : 0, host : "172.31.27.231:27030" },
+...       { _id : 1, host : "172.31.27.231:27031" },
+...       { _id : 2, host : "172.31.27.231:27032" }
+...       ]
+...   }
+... )
+{
+	"ok" : 1,
+	"$clusterTime" : {
+		"clusterTime" : Timestamp(1644929492, 1),
+		"signature" : {
+			"hash" : BinData(0,"AAAAAAAAAAAAAAAAAAAAAAAAAAA="),
+			"keyId" : NumberLong(0)
+		}
+	},
+	"operationTime" : Timestamp(1644929492, 1)
+}
+shrd1repl:SECONDARY> 
+shrd1repl:SECONDARY> 
+shrd1repl:SECONDARY> 
+shrd1repl:SECONDARY> 
+shrd1repl:SECONDARY> 
+shrd1repl:SECONDARY> 
+shrd1repl:SECONDARY> 
+shrd1repl:SECONDARY> 
+shrd1repl:SECONDARY> 
+shrd1repl:SECONDARY> 
+shrd1repl:PRIMARY> 
+shrd1repl:PRIMARY> 
+shrd1repl:PRIMARY> 
+shrd1repl:PRIMARY> 
+shrd1repl:PRIMARY> 
+shrd1repl:PRIMARY> 
+shrd1repl:PRIMARY> 
+shrd1repl:PRIMARY> rs.status()
+{
+	"set" : "shrd1repl",
+	"date" : ISODate("2022-02-15T12:51:49.033Z"),
+	"myState" : 1,
+	"term" : NumberLong(1),
+	"syncSourceHost" : "",
+	"syncSourceId" : -1,
+	"heartbeatIntervalMillis" : NumberLong(2000),
+	"majorityVoteCount" : 2,
+	"writeMajorityCount" : 2,
+	"votingMembersCount" : 3,
+	"writableVotingMembersCount" : 3,
+	"optimes" : {
+		"lastCommittedOpTime" : {
+			"ts" : Timestamp(1644929503, 5),
+			"t" : NumberLong(1)
+		},
+		"lastCommittedWallTime" : ISODate("2022-02-15T12:51:43.106Z"),
+		"readConcernMajorityOpTime" : {
+			"ts" : Timestamp(1644929503, 5),
+			"t" : NumberLong(1)
+		},
+		"readConcernMajorityWallTime" : ISODate("2022-02-15T12:51:43.106Z"),
+		"appliedOpTime" : {
+			"ts" : Timestamp(1644929503, 5),
+			"t" : NumberLong(1)
+		},
+		"durableOpTime" : {
+			"ts" : Timestamp(1644929503, 5),
+			"t" : NumberLong(1)
+		},
+		"lastAppliedWallTime" : ISODate("2022-02-15T12:51:43.106Z"),
+		"lastDurableWallTime" : ISODate("2022-02-15T12:51:43.106Z")
+	},
+	"lastStableRecoveryTimestamp" : Timestamp(1644929503, 4),
+	"electionCandidateMetrics" : {
+		"lastElectionReason" : "electionTimeout",
+		"lastElectionDate" : ISODate("2022-02-15T12:51:43.059Z"),
+		"electionTerm" : NumberLong(1),
+		"lastCommittedOpTimeAtElection" : {
+			"ts" : Timestamp(0, 0),
+			"t" : NumberLong(-1)
+		},
+		"lastSeenOpTimeAtElection" : {
+			"ts" : Timestamp(1644929492, 1),
+			"t" : NumberLong(-1)
+		},
+		"numVotesNeeded" : 2,
+		"priorityAtElection" : 1,
+		"electionTimeoutMillis" : NumberLong(10000),
+		"numCatchUpOps" : NumberLong(0),
+		"newTermStartDate" : ISODate("2022-02-15T12:51:43.096Z"),
+		"wMajorityWriteAvailabilityDate" : ISODate("2022-02-15T12:51:44.564Z")
+	},
+	"members" : [
+		{
+			"_id" : 0,
+			"name" : "172.31.27.231:27030",
+			"health" : 1,
+			"state" : 1,
+			"stateStr" : "PRIMARY",
+			"uptime" : 4370,
+			"optime" : {
+				"ts" : Timestamp(1644929503, 5),
+				"t" : NumberLong(1)
+			},
+			"optimeDate" : ISODate("2022-02-15T12:51:43Z"),
+			"lastAppliedWallTime" : ISODate("2022-02-15T12:51:43.106Z"),
+			"lastDurableWallTime" : ISODate("2022-02-15T12:51:43.106Z"),
+			"syncSourceHost" : "",
+			"syncSourceId" : -1,
+			"infoMessage" : "Could not find member to sync from",
+			"electionTime" : Timestamp(1644929503, 1),
+			"electionDate" : ISODate("2022-02-15T12:51:43Z"),
+			"configVersion" : 1,
+			"configTerm" : -1,
+			"self" : true,
+			"lastHeartbeatMessage" : ""
+		},
+		{
+			"_id" : 1,
+			"name" : "172.31.27.231:27031",
+			"health" : 1,
+			"state" : 2,
+			"stateStr" : "SECONDARY",
+			"uptime" : 16,
+			"optime" : {
+				"ts" : Timestamp(1644929503, 5),
+				"t" : NumberLong(1)
+			},
+			"optimeDurable" : {
+				"ts" : Timestamp(1644929503, 5),
+				"t" : NumberLong(1)
+			},
+			"optimeDate" : ISODate("2022-02-15T12:51:43Z"),
+			"optimeDurableDate" : ISODate("2022-02-15T12:51:43Z"),
+			"lastAppliedWallTime" : ISODate("2022-02-15T12:51:43.106Z"),
+			"lastDurableWallTime" : ISODate("2022-02-15T12:51:43.106Z"),
+			"lastHeartbeat" : ISODate("2022-02-15T12:51:47.075Z"),
+			"lastHeartbeatRecv" : ISODate("2022-02-15T12:51:48.530Z"),
+			"pingMs" : NumberLong(0),
+			"lastHeartbeatMessage" : "",
+			"syncSourceHost" : "172.31.27.231:27030",
+			"syncSourceId" : 0,
+			"infoMessage" : "",
+			"configVersion" : 1,
+			"configTerm" : -1
+		},
+		{
+			"_id" : 2,
+			"name" : "172.31.27.231:27032",
+			"health" : 1,
+			"state" : 2,
+			"stateStr" : "SECONDARY",
+			"uptime" : 16,
+			"optime" : {
+				"ts" : Timestamp(1644929503, 5),
+				"t" : NumberLong(1)
+			},
+			"optimeDurable" : {
+				"ts" : Timestamp(1644929503, 5),
+				"t" : NumberLong(1)
+			},
+			"optimeDate" : ISODate("2022-02-15T12:51:43Z"),
+			"optimeDurableDate" : ISODate("2022-02-15T12:51:43Z"),
+			"lastAppliedWallTime" : ISODate("2022-02-15T12:51:43.106Z"),
+			"lastDurableWallTime" : ISODate("2022-02-15T12:51:43.106Z"),
+			"lastHeartbeat" : ISODate("2022-02-15T12:51:47.074Z"),
+			"lastHeartbeatRecv" : ISODate("2022-02-15T12:51:48.532Z"),
+			"pingMs" : NumberLong(0),
+			"lastHeartbeatMessage" : "",
+			"syncSourceHost" : "172.31.27.231:27030",
+			"syncSourceId" : 0,
+			"infoMessage" : "",
+			"configVersion" : 1,
+			"configTerm" : -1
+		}
+	],
+	"ok" : 1,
+	"$clusterTime" : {
+		"clusterTime" : Timestamp(1644929503, 5),
+		"signature" : {
+			"hash" : BinData(0,"AAAAAAAAAAAAAAAAAAAAAAAAAAA="),
+			"keyId" : NumberLong(0)
+		}
+	},
+	"operationTime" : Timestamp(1644929503, 5)
+}
+shrd1repl:PRIMARY> 
+shrd1repl:PRIMARY> 
+shrd1repl:PRIMARY> 
+shrd1repl:PRIMARY> 
