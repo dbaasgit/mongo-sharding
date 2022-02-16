@@ -46,6 +46,7 @@ mongod_shard2c.conf
 )
 
 5th:- creating services in /usr/lib/systemd/system/   dir [use touch command ex. sudo touch mongod_shard1a.service]
+  
   (mongod_shard1a.service
 mongod_shard1b.service
 mongod_shard1c.service
@@ -57,7 +58,8 @@ mongod_shard2a.service
 mongod_shard2b.service
 mongod_shard2c.service)
   
- 6th:- now create moongod binary in /usr/bin/  dir [use cp command ex. sudo cp mongod mongod_shard1a. and dont create for mongos or mongod as it already been created by Default when we install mongo]
+ 6th:- now create mongod binary in /usr/bin/  dir [use cp command ex. sudo cp mongod mongod_shard1a. and dont create for mongos or mongod as it already been created by Default when we install mongo]
+  
   ( mongodconf1
  mongod_shard1a
  mongod_shard1b
@@ -70,4 +72,4 @@ mongod_shard2c.service)
 )
   
   
-6th:- create  
+7th:- create  
