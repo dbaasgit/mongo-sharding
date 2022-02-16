@@ -1,0 +1,14 @@
+[ec2-user@ip-172-31-27-231 ~]$ cd /usr/bin/ 
+[ec2-user@ip-172-31-27-231 ~]$
+[ec2-user@ip-172-31-27-231 ~]$
+[ec2-user@ip-172-31-27-231 ~]$
+[ec2-user@ip-172-31-27-231 ~]$ sudo cp mongod mongodconf1
+[ec2-user@ip-172-31-27-231 ~]$ sudo cp mongod mongod_shard1a
+[ec2-user@ip-172-31-27-231 ~]$ sudo cp mongod mongod_shard1b
+[ec2-user@ip-172-31-27-231 ~]$ sudo cp mongod mongod_shard1c
+[ec2-user@ip-172-31-27-231 ~]$ sudo cp mongod mongodconf2
+[ec2-user@ip-172-31-27-231 ~]$ sudo cp mongod mongodconf3
+[ec2-user@ip-172-31-27-231 ~]$ sudo cp mongod mongod_shard2a
+[ec2-user@ip-172-31-27-231 ~]$ sudo cp mongod mongod_shard2b
+[ec2-user@ip-172-31-27-231 ~]$ sudo cp mongod mongod_shard2c
+
