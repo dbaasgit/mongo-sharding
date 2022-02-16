@@ -1,5 +1,5 @@
 #enabling mongo services
- sudo systemctl enabe mongod_shard1a.service
+sudo systemctl enabe mongod_shard1a.service
 sudo systemctl enabe mongod_shard1b.service
 sudo systemctl enabe mongod_shard1c.service
 sudo systemctl enabe mongod_confserv1.service
