@@ -22,3 +22,7 @@ Shard-2 server:-
               mongo_shard2c   port 27042
              
 mongos port 27017
+
+Steps:-
+1st:- install monngod successfully on the server(my version was 4.4).
+2nd:- create the data and log directory for each node (for config, shard1 and shard2 and mongos) 
