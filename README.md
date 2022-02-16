@@ -30,3 +30,5 @@ Steps:-
 2nd:- create the data and log directory for each node (for config, shard1 and shard2 and mongos) 
 
 3rd:- change the group permission to those directories sudo chown -R mongod:mongod <directory>
+
+4th:- create configuration file for each node in /etc dir.
