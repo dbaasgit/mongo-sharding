@@ -32,3 +32,15 @@ Steps:-
 3rd:- change the group permission to those directories sudo chown -R mongod:mongod <directory>
 
 4th:- create configuration file for each node in /etc dir.
+
+5th:- create configuration file for each node. (mongod_shard1a.conf
+mongod_shard1b.conf
+mongod_shard1c.conf
+mongodconf1.conf
+mongodconf2.conf
+mongodconf3.conf
+mongos.conf
+mongod_shard2a.conf
+mongod_shard2b.conf
+mongod_shard2c.conf
+)
